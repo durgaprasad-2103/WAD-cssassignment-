@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background: #333; /* Simplified background color */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.nav-menu a:hover {
+    color: #ffd700; /* Highlighted color on hover */
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: white;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for focus */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGx4_h8WBE1kaxotI1Q0mY82CS9krwnyjNbQ&s') no-repeat center center/cover;
+    filter: blur(8px); /* Apply blur filter */
+    z-index: -1; /* Place it behind the content */
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for clarity */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: black; /* Paragraph text in black */
+}
+
+/* Footer Section */
+footer {
+    background: #333; /* Simplified background color */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-family: 'Courier New', Courier, monospace; /* Different font */
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer .social-links li {
+    margin: 0 1rem;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s; /* Add hover animation */
+}
+
+footer .social-links a:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+    color: #ffd700; /* Highlighted color */
+}
+
+/* Add Button Styles for Links */
+button, .btn {
+    display: inline-block;
+    background: #333; /* Simplified background color */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: #555; /* Slightly lighter color on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+}
