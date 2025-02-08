@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivanta Restaurant - Contact</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #eaeaea;
+        }
+        header {
+            background-color: #3b3b3b;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .container {
+            padding: 60px 20px;
+            background-color: #1c1c1c;
+        }
+        section {
+            margin: 40px 0;
+            color: #f5f5f5;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #d4af37;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+        form button {
+            background-color: #d4af37;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover {
+            background-color: #b38e30;
+        }
+        footer {
+            background-color: #3b3b3b;
+            padding: 20px 0;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #444;
+        }
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert(`Thank you, ${name}! Your message has been received. We will contact you at ${email}.`);
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please fill in all fields before submitting the form.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="rest.html">Home</a>
+            <a href="restmenu.html">Menu</a>
+            <a href="restcontact.html'">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Vivanta Restaurant. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
